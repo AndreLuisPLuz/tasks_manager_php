@@ -7,7 +7,7 @@
     $servidor = "localhost";
     $usuario = "root";
     $senha = "";
-    $bd = "tarefas";
+    $bd = "senac";
     //$mysqli = new mysqli($servidor, $usuario, $senha, $bd);
     $conn = mysqli_connect($servidor, $usuario, $senha, $bd);
 //if ($mysqli -> connect_errno) {

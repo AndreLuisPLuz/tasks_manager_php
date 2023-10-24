@@ -8,7 +8,7 @@ require_once "includes/header.php";
 
 if (isset($_GET['id'])){
     $id = $_GET['id'];
-    $query = "SELECT * FROM `tarefas` WHERE= `id`='$id'";
+    $query = "SELECT * FROM `tarefa` WHERE= `id`='$id'";
     $result = mysqli_query($conn, $query);
 
     $row = mysqli_fetch_assoc($result);
@@ -20,7 +20,7 @@ if(isset($_POST['update'])){
     $id = $_GET['id'];//via get url
     $title = $_POST['titulo']; //valor alterado pelo usuario
     $descricao = $_POST['descricao']; // valor alterado pelo usuario
-    $sqlUpdate = "UPDATE `tarefas` SET `title`='$title',`description`='$descricao' WHERE= `id`='$id'";
+    $sqlUpdate = "UPDATE `tarefa` SET `title`='$title',`description`='$descricao' WHERE= `id`='$id'";
     $result = mysqli_query($conn, $sqlUpdate);
 
     header("Location: index.php");

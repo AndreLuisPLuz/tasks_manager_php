@@ -43,7 +43,7 @@
                     </thead>
                     <tbody>
                     <?php
-                    $query = "SELECT * FROM `tarefas`";
+                    $query = "SELECT * FROM `tarefa`";
                     $result = mysqli_query($conn, $query);
                     while ($row = mysqli_fetch_assoc($result)) { ?>
                         <tr>
