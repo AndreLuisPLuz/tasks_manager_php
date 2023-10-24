@@ -1,8 +1,18 @@
 <?php
-require_once 'conexao.php';
-require_once "includes/header.php";
+    require_once 'conexao.php';
+    require_once "includes/header.php";
 ?>
     <main>
+        <?php
+            if (isset($_SESSION["message"])) { ?>
+                <div class="alert alert-<?=$_SESSION["message_type"]?> alert-dismissable fade show" role="alert">
+                    <?=$_SESSION["message"]?>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <?php }?>
+
         <div class="row">
             <div class="col-md-4">
                 <div class="card card-body">
